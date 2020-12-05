@@ -3,7 +3,6 @@ import bs4, requests
 def getAmazonPrice(productUrl): # Take in the URL of the Amazon page
     headers = {
     'User-Agent': 'My User Agent 1.0',
-    'From': 'youremail@domain.com'  # This is another valid field
     }
     res = requests.get(productUrl, headers=headers)
     res.raise_for_status()
@@ -13,7 +12,7 @@ def getAmazonPrice(productUrl): # Take in the URL of the Amazon page
     return elems[0].text.strip(), title[0].text.strip() # Return two answers: price, title
 
 
-x = input('Enter a URL:')
+user_url = input('Enter a URL:')
 
-price, title = getAmazonPrice(x)
+price, title = getAmazonPrice(user_url)
 print('The price of "' + title + '" is ' + price + '.')
