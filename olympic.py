@@ -1,4 +1,6 @@
 # Ask a user to name one of the Olympic medals (Gold, Silver, Bronze)
+# Code it so that the user can use either upper case or lower case.
+# If the user’s answer is correct, output ‘Correct‘, else output a different message.
 
 print("Name one of the colors of Olympic medals!")
 medal = input()
